@@ -123,31 +123,12 @@ using namespace std;
 //	return a.second > b.second;
 //}
 //
-
-bool isSquare(long long int n){
-	long long int x = sqrt(n);
-	if(x*x == n)return true;
-	return false;
-}
-void solve() {
-	long long int n;
-	cin>>n;
-	if(n==1){
-		cout<<"NO"<<endl;
-		return;
-	}
-	if(isSquare(n/2) == true && n%2==0 && (n/2)*2 == n){
-		cout<<"YES"<<endl;
-		return;
-	}else if(n%2==0 && isSquare(n/4) == true && (n/4)*4==n){
-		cout<<"YES"<<endl;
-		return;
-	}else{
-		cout<<"NO"<<endl;
-		return;
-	}
-	
-}
+//
+//bool isSquare(long long int n){
+//	long long int x = sqrt(n);
+//	if(x*x == n)return true;
+//	return false;
+//}
 
 
 //set <long long> tprimes;
@@ -162,6 +143,21 @@ void solve() {
 //	return true;
 //}
 
+
+void solve() {
+	int n;
+	cin>>n;
+	double ans = 0.0;
+	while(n>0){
+		ans += (1.0/n);
+		n--;
+	}
+	cout<<fixed<<setprecision(12)<<ans<<endl;
+	return;
+	
+}
+
+
 int main()
 {
 	IOS;
@@ -172,14 +168,14 @@ int main()
 //            }
 //        }
 	
-    int t;
-    cin>>t;
-    while(t--){
-    	solve();
-    }
+//    int t;
+//    cin>>t;
+//    while(t--){
+//    	solve();
+//    }
 	
 	
-	//solve();
+	solve();
     
     return 0;
     
